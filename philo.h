@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csiqueir <csiqueir@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/14 20:32:24 by csiqueir          #+#    #+#             */
+/*   Updated: 2023/10/14 20:32:28 by csiqueir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
@@ -24,6 +35,8 @@ typedef struct s_data
 	int			meal_goal;
 	time_t		start_time_sec;
 	suseconds_t	start_time_usec;
+	int			finish;
+	int			finish_count;
 }				t_data;
 
 typedef struct s_philo
@@ -32,7 +45,6 @@ typedef struct s_philo
 	time_t		last_meal;
 	int			meal_count;
 	pthread_t	thread;
-	pthread_t	monitor;
 }				t_philo;
 
 typedef struct s_setup
