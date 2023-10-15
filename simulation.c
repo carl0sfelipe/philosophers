@@ -6,7 +6,7 @@
 /*   By: csiqueir <csiqueir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 20:32:36 by csiqueir          #+#    #+#             */
-/*   Updated: 2023/10/14 20:36:17 by csiqueir         ###   ########.fr       */
+/*   Updated: 2023/10/14 23:18:46 by csiqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static	void	*vulture_monitor(void *arg)
 		if ((timestamp - config[idx].philo->last_meal) > \
 			config->data->time_to_die)
 		{
-			printf("%ld %d has die\n", timestamp, config[idx].philo->id + 1);
+			printf("%ld %d die\n", timestamp, config[idx].philo->id + 1);
 			*config->finish = 1;
 			return (NULL);
 		}
